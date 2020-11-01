@@ -1,0 +1,73 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Calculadora Simples'
+  ClientHeight = 129
+  ClientWidth = 411
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Valor1: TEdit
+    Left = 24
+    Top = 24
+    Width = 113
+    Height = 21
+    TabOrder = 0
+  end
+  object soma: TButton
+    Left = 24
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = '+'
+    TabOrder = 1
+    OnClick = somaClick
+  end
+  object subtracao: TButton
+    Left = 120
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = '-'
+    TabOrder = 2
+    OnClick = subtracaoClick
+  end
+  object divisao: TButton
+    Left = 216
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = '/'
+    TabOrder = 3
+    OnClick = divisaoClick
+  end
+  object multiplicacao: TButton
+    Left = 312
+    Top = 72
+    Width = 75
+    Height = 25
+    Caption = '*'
+    TabOrder = 4
+    OnClick = multiplicacaoClick
+  end
+  object Valor2: TEdit
+    Left = 143
+    Top = 24
+    Width = 113
+    Height = 21
+    TabOrder = 5
+  end
+  object Resultado: TEdit
+    Left = 262
+    Top = 24
+    Width = 125
+    Height = 21
+    TabOrder = 6
+  end
+end
