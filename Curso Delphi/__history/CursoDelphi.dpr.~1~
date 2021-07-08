@@ -2,8 +2,7 @@
 
 uses
   Vcl.Forms,
-  uPrincipal in 'uPrincipal.pas' {FrmPrincipal},
-  uFrmDataHora in 'uFrmDataHora.pas' {FrmDataHora};
+  uPrincipal in 'uPrincipal.pas' {FrmPrincipal};
 
 {$R *.res}
 
@@ -11,6 +10,5 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFrmPrincipal, FrmPrincipal);
-  Application.CreateForm(TFrmDataHora, FrmDataHora);
   Application.Run;
 end.
