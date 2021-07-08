@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, System.UITypes,  Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.StdCtrls,
-  System.ImageList, Vcl.ImgList;
+  System.ImageList, Vcl.ImgList, uFrmDataHora;
 
 type
   TFrmPrincipal = class(TForm)
@@ -46,6 +46,7 @@ type
     procedure Button4Click(Sender: TObject);
     procedure Button6Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure btnFormClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,6 +61,11 @@ implementation
 {$R *.dfm}
 
 
+procedure TFrmPrincipal.btnFormClick(Sender: TObject);
+begin
+  FrmDataHora.ShowModal;
+end;
+
 procedure TFrmPrincipal.btnLimparClick(Sender: TObject);
 begin
   lstBxItensSelecionados.Items.Clear;
@@ -67,22 +73,22 @@ end;
 
 procedure TFrmPrincipal.Button1Click(Sender: TObject);
 begin
-  PgCtrlPrincipal.ActivePageIndex := 1;
+  PgCtrlPrincipal.ActivePageIndex := 1; //voltando para a aba
 end;
 
 procedure TFrmPrincipal.Button2Click(Sender: TObject);
 begin
-  PgCtrlPrincipal.ActivePageIndex := 0;
+  PgCtrlPrincipal.ActivePageIndex := 0; //voltando para a aba
 end;
 
 procedure TFrmPrincipal.Button3Click(Sender: TObject);
 begin
-PgCtrlPrincipal.ActivePageIndex := 2;
+  PgCtrlPrincipal.ActivePageIndex := 2; //voltando para a aba
 end;
 
 procedure TFrmPrincipal.Button4Click(Sender: TObject);
 begin
-PgCtrlPrincipal.ActivePageIndex := 1;
+PgCtrlPrincipal.ActivePageIndex := 1;  //avoltando para a aba
 end;
 
 procedure TFrmPrincipal.Button5Click(Sender: TObject);
@@ -121,7 +127,7 @@ begin
    edtCaracteres.SetFocus;
  end
  else
-  if Length(edtCaracteres.Text) <> 4 then
+  if Length(edtCaracteres.Text) < 4 then
   begin
     MessageDlg('Você não digitou 4 caracteres',
     mtError, [mbOk], 0);

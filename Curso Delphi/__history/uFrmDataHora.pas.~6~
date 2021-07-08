@@ -1,0 +1,44 @@
+﻿unit uFrmDataHora;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, dxGDIPlusClasses, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TFrmDataHora = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Label1: TLabel;
+    lblDataHora: TLabel;
+    Image1: TImage;
+    Timer1: TTimer;
+    procedure Timer1Timer(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmDataHora: TFrmDataHora;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmDataHora.FormShow(Sender: TObject);
+begin
+  Timer1.Enabled := True;
+  lblDataHora.Caption := FormatDateTime('dd/mm/yyyy hh:mm:ss', now);
+end;
+
+procedure TFrmDataHora.Timer1Timer(Sender: TObject);
+begin
+  lblDataHora.Caption := FormatDateTime('dd/mm/yyyy hh:mm:ss', now);
+end;
+
+end.

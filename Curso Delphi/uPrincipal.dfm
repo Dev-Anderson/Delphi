@@ -28,24 +28,17 @@ object FrmPrincipal: TFrmPrincipal
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitLeft = 200
-    ExplicitTop = 56
-    ExplicitWidth = 185
   end
   object PgCtrlPrincipal: TPageControl
     Left = 0
     Top = 41
     Width = 587
     Height = 285
-    ActivePage = TabSheet3
+    ActivePage = TabSheet1
     Align = alClient
     TabOrder = 1
-    ExplicitHeight = 363
     object TabSheet1: TTabSheet
       Caption = 'Aba 1'
-      ExplicitLeft = 8
-      ExplicitWidth = 616
-      ExplicitHeight = 335
       object GroupBox1: TGroupBox
         Left = 56
         Top = 72
@@ -81,6 +74,7 @@ object FrmPrincipal: TFrmPrincipal
         ImageMargins.Left = 10
         Images = ImageList1
         TabOrder = 1
+        OnClick = btnFormClick
       end
       object Panel1: TPanel
         Left = 0
@@ -89,8 +83,6 @@ object FrmPrincipal: TFrmPrincipal
         Height = 31
         Align = alBottom
         TabOrder = 2
-        ExplicitTop = 304
-        ExplicitWidth = 616
         object Button1: TButton
           Left = 503
           Top = 1
@@ -100,18 +92,12 @@ object FrmPrincipal: TFrmPrincipal
           Caption = '>>'
           TabOrder = 0
           OnClick = Button1Click
-          ExplicitLeft = 256
-          ExplicitTop = 0
-          ExplicitHeight = 25
         end
       end
     end
     object TabSheet2: TTabSheet
       Caption = 'Aba 2'
       ImageIndex = 1
-      ExplicitLeft = 8
-      ExplicitWidth = 616
-      ExplicitHeight = 335
       object Label2: TLabel
         Left = 360
         Top = 32
@@ -168,9 +154,6 @@ object FrmPrincipal: TFrmPrincipal
         Height = 41
         Align = alBottom
         TabOrder = 4
-        ExplicitLeft = 168
-        ExplicitTop = 264
-        ExplicitWidth = 185
         object Button2: TButton
           Left = 1
           Top = 1
@@ -180,9 +163,6 @@ object FrmPrincipal: TFrmPrincipal
           Caption = '<<'
           TabOrder = 0
           OnClick = Button2Click
-          ExplicitLeft = 16
-          ExplicitTop = 8
-          ExplicitHeight = 25
         end
         object Button3: TButton
           Left = 503
@@ -193,17 +173,12 @@ object FrmPrincipal: TFrmPrincipal
           Caption = '>>'
           TabOrder = 1
           OnClick = Button3Click
-          ExplicitLeft = 256
-          ExplicitTop = 8
-          ExplicitHeight = 25
         end
       end
     end
     object TabSheet3: TTabSheet
       Caption = 'Aba 3'
       ImageIndex = 2
-      ExplicitWidth = 616
-      ExplicitHeight = 335
       object Label3: TLabel
         Left = 3
         Top = 24
@@ -218,9 +193,6 @@ object FrmPrincipal: TFrmPrincipal
         Height = 41
         Align = alBottom
         TabOrder = 0
-        ExplicitLeft = 200
-        ExplicitTop = 144
-        ExplicitWidth = 185
         object Button4: TButton
           Left = 1
           Top = 1
@@ -230,9 +202,6 @@ object FrmPrincipal: TFrmPrincipal
           Caption = '<<'
           TabOrder = 0
           OnClick = Button4Click
-          ExplicitLeft = 256
-          ExplicitTop = 8
-          ExplicitHeight = 25
         end
       end
       object MmObservacao: TMemo
@@ -267,7 +236,7 @@ object FrmPrincipal: TFrmPrincipal
     Left = 240
     Top = 64
     Bitmap = {
-      494C010101000800140010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010101000800180010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       00000000000000000000000000000000000019117DFF1B0E92FF1D1095FF1D0F
       94FF1E138BFF201671FF201958FF1D182BFF1E182AFF211B42FF211B64FF241A
